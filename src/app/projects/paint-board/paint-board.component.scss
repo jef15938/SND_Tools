@@ -1,0 +1,46 @@
+@import '../style/project-common.scss';
+
+div{
+    cursor: url("../../../assets/pencil.png"), auto;
+}
+
+button {
+    cursor: url("../../../assets/pencil.png"), auto;
+}
+.rightTopBtn {
+    right: 10px;
+    top: 10px;
+    width: 25%;
+    position: absolute;
+    z-index: 9;
+}
+
+.leftTopBtn {
+    left: 10px;
+    top: 10px;
+    width: 15%;
+    display: inline-block;
+    position: relative;
+    z-index: 9;
+}
+
+.canvas {
+    border: 1px black solid;
+    position: absolute;
+    // //height: auto;
+    left: 0;
+    top: 0;
+    //cursor: url("../../../assets/pencil.png"), auto;
+    // cursor: wait;
+   // background-color: aquamarine;
+    //z-index: 99;
+}
+
+.saveImg {
+    border: 1px black solid;
+    position: absolute;
+    left: 10px;
+    width: 30%;
+    height: 30%;
+    bottom: 0;
+}

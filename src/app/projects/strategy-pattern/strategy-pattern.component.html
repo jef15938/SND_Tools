@@ -1,0 +1,14 @@
+<div class="body">
+  <h1 class="title">Strategy Pattern</h1>
+  <div class="inputNumberArea">
+    <input type="number" [(ngModel)]="firstNumber" (ngModelChange)="calculate()" oninput="if(value.length>4){value=value.slice(0,4)}">
+    <div class="buttonArea">
+      <button (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)" (click)="onClick($event)" id="plus" [ngStyle]="{'border': targetID=='plus'?'3px black solid':'','background-color': targetID=='plus'?'blue':'white'}">+</button>
+      <button (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)" (click)="onClick($event)" id="minus" [ngStyle]="{'border': targetID=='minus'?'3px black solid':'','background-color': targetID=='minus'?'blue':'white'}">-</button>
+      <button (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)" (click)="onClick($event)" id="multiply" [ngStyle]="{'border': targetID=='multiply'?'3px black solid':'','background-color': targetID=='multiply'?'blue':'white'}">*</button>
+      <button (mouseover)="onMouseOver($event)" (mouseout)="onMouseOut($event)" (click)="onClick($event)" id="divide" [ngStyle]="{'border': targetID=='divide'?'3px black solid':'','background-color': targetID=='divide'?'blue':'white'}">/</button>
+    </div>
+    <input type="number" [(ngModel)]="lastNumber" (ngModelChange)="calculate()" oninput="if(value.length>4){value=value.slice(0,4)};">
+  </div>
+  <div class="answerArea">Ans: {{answer}}</div>
+</div>
