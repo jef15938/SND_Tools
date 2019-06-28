@@ -19,6 +19,7 @@ export class MenuComponent implements OnInit {
     tempMenuList.push(new menuItem('koaep', '/koaep'));
     tempMenuList.push(new menuItem('paintBoard', '/paintBoard'));
     tempMenuList.push(new menuItem('strategyPattern','/strategyPattern'));
+    tempMenuList.push(new menuItem('prototypePattern','/prototypePattern'));
     this.menuList = tempMenuList;
     this.clickItem = this.menuList[0];
   }

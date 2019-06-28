@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import * as fromStore from './store';
 import { PaintBoardComponent } from './projects/paint-board/paint-board.component';
 import { StrategyPatternComponent } from './projects/strategy-pattern/strategy-pattern.component';
+import { PrototypePatternComponent } from './projects/prototype-pattern/prototype-pattern.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StrategyPatternComponent } from './projects/strategy-pattern/strategy-p
     HomePageComponent,
     KoaepComponent,
     PaintBoardComponent,
-    StrategyPatternComponent
+    StrategyPatternComponent,
+    PrototypePatternComponent
   ],
   imports: [
     BrowserModule,

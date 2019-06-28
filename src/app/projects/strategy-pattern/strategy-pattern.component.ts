@@ -24,7 +24,7 @@ export class StrategyPatternComponent implements OnInit {
   onMouseOver(event) {
     let targetID = event.target.id;
     if (this.targetID != targetID) {
-      event.target.style.backgroundColor = "blue";
+      event.target.style.backgroundColor = "#b6f0a1";
     }
   }
 
