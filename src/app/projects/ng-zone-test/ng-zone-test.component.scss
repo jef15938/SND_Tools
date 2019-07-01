@@ -1,0 +1,40 @@
+@import '../style/project-common.scss';
+
+
+.myDiv {
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 60px;
+}
+
+.btnArea {
+    display: inline-flex;
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    justify-content: space-around;
+
+    
+}
+
+.inputNumberArea {
+    position: relative;
+    display: flex;
+    width: 30%;
+    height: 10%;
+    left: 35%;
+    top: 30%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 60px;
+}

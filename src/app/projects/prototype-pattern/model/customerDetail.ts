@@ -46,9 +46,9 @@ export class CustomerDetail {
     }
 
 
-    public clone(): CustomerDetail{
+    public deepClone(): CustomerDetail{
         
-        return new CustomerDetail(this._name,this._address,this._gender,this._telList.map(x => x.clone()));
+        return new CustomerDetail(this._name,this._address,this._gender,this._telList.map(x => x.deepClone()));
         
     }
 
@@ -86,7 +86,7 @@ export class TelList {
         this._name = name;
     }
 
-    public clone():TelList {
+    public deepClone():TelList {
         return new TelList(this._name,this._tel);
     }
 

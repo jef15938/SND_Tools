@@ -1,6 +1,6 @@
 <div class="body">
 
-  <h1 class="title">Prototype Pattern</h1>
+  <h1 class="title">{{title}}</h1>
   <div class="btnArea">
     <div>
       <button (click)="addEmptyCustomerDetail()">+</button>
@@ -11,18 +11,17 @@
       <p>add default customerDetail</p>
     </div>
     <div>
-        <button (click)="clearCustomerDetailList()">-</button>
-        <p>clear</p>
-      </div>
+      <button (click)="clearCustomerDetailList()">-</button>
+      <p>clear</p>
+    </div>
   </div>
-  <!-- <ul style='list-style-position:outside;' class="custmerDetailList">
-    <li>name address gender</li>
-  </ul> -->
+
 
   <table class="custmerDetailList">
     <tr>
-      <th>Clone</th>
+      <th>DeepClone</th>
       <th>DirtyClone</th>
+      <th>cloneObj = tarObj</th>
       <th>Name(string)</th>
       <th>Address(string)</th>
       <th>Gender(string)</th>
@@ -30,15 +29,16 @@
     </tr>
 
     <tr *ngFor="let customerDetail of customerDetailList" [ngStyle]="{'background-color': customerDetail.color}">
-      <th><button (click)="cloneCustomerDetail(customerDetail)">+</button></th>
+      <th><button (click)="deepCloneCustomerDetail(customerDetail)">+</button></th>
       <th><button (click)="dirtyCloneCustomerDetail(customerDetail)">+</button></th>
+      <th><button (click)="cloneCustomerDetail(customerDetail)">+</button></th>
       <th><input type="text" [(ngModel)]="customerDetail.name"></th>
       <th><input type="text" [(ngModel)]="customerDetail.address"></th>
       <th><input type="text" [(ngModel)]="customerDetail.gender"></th>
       <th>
         <ng-container *ngFor="let tel of customerDetail.telList">
-        Name:<input type="text" [(ngModel)]="tel.name"> Tel:<input type="text" [(ngModel)]="tel.tel">
-        <br>
+          Name:<input type="text" [(ngModel)]="tel.name">Tel:<input type="text" [(ngModel)]="tel.tel">
+          
         </ng-container>
       </th>
     </tr>
@@ -46,3 +46,5 @@
 
   </table>
 </div>
+
+

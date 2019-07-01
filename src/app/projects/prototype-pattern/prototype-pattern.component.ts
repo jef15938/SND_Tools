@@ -10,45 +10,42 @@ export class PrototypePatternComponent implements OnInit {
 
   constructor() { }
 
+  public title: string = 'Prototype Pattern';
   public customerDetail: CustomerDetail;
 
   public customerDetailList: Array<CustomerDetail> = [];
 
+
   ngOnInit() {
-    this.customerDetail = new CustomerDetail("Mary","Kaohsiung","M",[new TelList('Mary,s father','0912')]);
-    let cloneObj = this.customerDetail.clone();
-    cloneObj.telList[0].name = 'change father';
-    console.log("this.customerDetail: ",this.customerDetail);
-    console.log("this.cloneObj: ",cloneObj);
+    
   }
 
   addEmptyCustomerDetail() {
 
-    let emptyCustomerDetail = new CustomerDetail('','','',[new TelList('','')]); 
+    let emptyCustomerDetail = new CustomerDetail('', '', '', [new TelList('', '')]);
+    emptyCustomerDetail['color'] = '#b6f0a1';
     this.customerDetailList.push(emptyCustomerDetail);
-   
+
   }
 
   addDefaultCustomerDetail() {
 
-    let defaultCustomerDetail = new CustomerDetail('Jack','Kaohsiung','M',[new TelList('Jack,s father','0912'),new TelList('Jack,s mather','0934')]); 
-    
-  
+    let defaultCustomerDetail = new CustomerDetail('Jack', 'Kaohsiung', 'M', [new TelList('Jack,s father', '0912'), new TelList('Jack,s mather', '0934')]);
+
+
+    defaultCustomerDetail['color'] = '#b6f0a1';
     this.customerDetailList.push(defaultCustomerDetail);
 
   }
 
-  cloneCustomerDetail(customerDetail: CustomerDetail) {
+  deepCloneCustomerDetail(customerDetail: CustomerDetail) {
 
-  
-    if(customerDetail['color'] != '#f2b3b3') {
+    if (customerDetail['color'] != '#f2b3b3') {
       customerDetail['color'] = '#b6f0a1';
     }
-    let obj = customerDetail.clone();
+    let obj = customerDetail.deepClone();
     obj['color'] = '#b6f0a1';
     this.customerDetailList.push(obj);
-
-
   }
 
   dirtyCloneCustomerDetail(customerDetail: CustomerDetail) {
@@ -57,7 +54,16 @@ export class PrototypePatternComponent implements OnInit {
     let obj = customerDetail.dirtyClone();
     obj['color'] = '#f2b3b3';
     this.customerDetailList.push(obj);
-    
+
+  }
+
+  cloneCustomerDetail(customerDetail: CustomerDetail) {
+
+    customerDetail['color'] = '#f2b3b3';
+    let obj = customerDetail;
+    obj['color'] = '#f2b3b3';
+    this.customerDetailList.push(obj);
+
   }
 
 
@@ -65,9 +71,15 @@ export class PrototypePatternComponent implements OnInit {
     this.customerDetailList = [];
   }
 
-  
+
+  public deepCloneWithoutClass(obj) {
+
+    
+    return JSON.parse(JSON.stringify(obj));
+
+  }
 
 
-  
+
 
 }

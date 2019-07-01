@@ -2,7 +2,7 @@
   <button class="leftTopBtn" (click)="onClick('clear')" [hidden]="!isShowBtn">clear</button>
   <button class="leftTopBtn" [disabled]="isDisabledSave" (click)="onClick('save')" [hidden]="!isShowBtn">save</button>
   <button class="rightTopBtn" (click)="onClick('changeToWholeArea')" [hidden]="!isShowBtn">changeToWholeArea</button>
-  <h1 class="title" id="paintBoardTitle">Paint Board</h1>
+  <h1 class="title">Paint Board</h1>
   <canvas #canvasEl class="canvas" (pan)="onPan($event)"></canvas>
   <!-- <img [src]="imgSrc" > -->
   <img *ngIf="isShowImg" [src]="imgSrc" class="saveImg">

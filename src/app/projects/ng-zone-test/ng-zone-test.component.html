@@ -1,0 +1,27 @@
+<div class="body" >
+  <h1 class="title">{{title}}</h1>
+
+  <div class="btnArea">
+    <div>
+      <button (click)="setValueOutsideAngular()">setValueOutsideAngular</button>
+      <br/>
+      {{outsideAngularCode}}
+    </div>
+    <div>
+      <button (click)="setValueInsideAngular()">setValueInsideAngular</button>
+      <br/>
+      {{insideAngularCode}}
+    </div>
+    <div>
+      <button (click)="detectChanges()">detectChanges</button>
+    </div>
+  </div>
+
+  
+  <input type="number" [(ngModel)]="inputNumber" class="inputNumberArea">
+  <div class="myDiv">
+    result:<br>{{number}}
+  </div>
+  
+ 
+</div>
