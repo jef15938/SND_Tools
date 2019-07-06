@@ -74,3 +74,6 @@
     border:2px #000000 solid;
 }
 
+.disabled {
+   pointer-events:none; //This makes it not clickable
+}

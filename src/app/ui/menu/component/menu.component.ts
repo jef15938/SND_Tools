@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    //alert(window.location.href);
     let tempMenuList = [];
     tempMenuList.push(new menuItem('homePage', ''));
     tempMenuList.push(new menuItem('koaep', '/koaep'));
@@ -21,8 +22,12 @@ export class MenuComponent implements OnInit {
     tempMenuList.push(new menuItem('strategyPattern','/strategyPattern'));
     tempMenuList.push(new menuItem('prototypePattern','/prototypePattern'));
     tempMenuList.push(new menuItem('ngZoneTest','/ngZoneTest'));
+    
     this.menuList = tempMenuList;
-    this.clickItem = this.menuList[0];
+    
+    let findTargetMenuItemByUrl = this.menuList.findIndex(x => 'http://localhost:4200'+x.url === window.location.href);
+    
+    this.clickItem = this.menuList[findTargetMenuItemByUrl==-1?0:findTargetMenuItemByUrl];
   }
 
   @Output() menuStatus: EventEmitter<boolean> =  new EventEmitter();
