@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppStore } from 'src/app/appSore/appStore';
 
 
 @Component({
@@ -13,9 +14,12 @@ export class StrategyPatternComponent implements OnInit {
   public IStrategy: IStrategy;
   public firstNumber: number;
   public lastNumber: number;
- 
 
-  constructor() {
+
+  constructor(
+    private store: AppStore
+  ) {
+    this.store.setCurrentMenuItem('strategyPattern');
   }
 
   ngOnInit() {
@@ -63,8 +67,8 @@ export class StrategyPatternComponent implements OnInit {
   }
 
   calculate() {
-    if(!isNaN(Number(this.firstNumber)) && !isNaN(Number(this.lastNumber))) {
-      if(this.IStrategy) {
+    if (!isNaN(Number(this.firstNumber)) && !isNaN(Number(this.lastNumber))) {
+      if (this.IStrategy) {
         this.answer = this.IStrategy.calculate(+this.firstNumber, +this.lastNumber);
       }
     }
@@ -87,25 +91,25 @@ interface IStrategy {
 class Plus implements IStrategy {
   calculate(x: number, y: number): number {
     return x + y;
-  } 
+  }
 }
 
 class Minus implements IStrategy {
   calculate(x: number, y: number): number {
     return x - y;
-  } 
+  }
 }
 
-class Multiply implements IStrategy{
+class Multiply implements IStrategy {
   calculate(x: number, y: number): number {
     return x * y;
-  } 
+  }
 }
 
 class Divide implements IStrategy {
   calculate(x: number, y: number): number {
     return x / y;
-  } 
+  }
 }
 
 

@@ -8,11 +8,13 @@ import { HomePageComponent } from './projects/home-page/home-page.component';
 import { KoaepComponent } from './projects/koaep/koaep.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { StoreModule } from '@ngrx/store';
-import * as fromStore from './store';
+import * as fromStore from './angularStore';
 import { PaintBoardComponent } from './projects/paint-board/paint-board.component';
 import { StrategyPatternComponent } from './projects/strategy-pattern/strategy-pattern.component';
 import { PrototypePatternComponent } from './projects/prototype-pattern/prototype-pattern.component';
 import { NgZoneTestComponent } from './projects/ng-zone-test/ng-zone-test.component';
+import { WebParameterTestComponent } from './projects/web-parameter-test/web-parameter-test.component';
+import { LocalStorageTestComponent } from './projects/local-storage-test/local-storage-test.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NgZoneTestComponent } from './projects/ng-zone-test/ng-zone-test.compon
     PaintBoardComponent,
     StrategyPatternComponent,
     PrototypePatternComponent,
-    NgZoneTestComponent
+    NgZoneTestComponent,
+    WebParameterTestComponent,
+    LocalStorageTestComponent
   ],
   imports: [
     BrowserModule,

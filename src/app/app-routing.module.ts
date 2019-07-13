@@ -6,14 +6,18 @@ import { PaintBoardComponent } from './projects/paint-board/paint-board.componen
 import { StrategyPatternComponent } from './projects/strategy-pattern/strategy-pattern.component';
 import { PrototypePatternComponent } from './projects/prototype-pattern/prototype-pattern.component';
 import { NgZoneTestComponent } from './projects/ng-zone-test/ng-zone-test.component';
+import { WebParameterTestComponent } from './projects/web-parameter-test/web-parameter-test.component';
+import { LocalStorageTestComponent } from './projects/local-storage-test/local-storage-test.component';
 
 const routes: Routes = [
-  { path: '', pathMatch:'full', component: HomePageComponent },
   { path: 'koaep', component: KoaepComponent },
   { path: 'paintBoard', component: PaintBoardComponent},
   { path: 'strategyPattern', component: StrategyPatternComponent},
   { path: 'prototypePattern', component : PrototypePatternComponent},
-  { path: 'ngZoneTest', component : NgZoneTestComponent}
+  { path: 'ngZoneTest', component : NgZoneTestComponent},
+  { path: 'webParameterTest', component : WebParameterTestComponent},
+  { path: 'localStorageTest', component : LocalStorageTestComponent},
+  { path: '', component: HomePageComponent }
 
 ];
 

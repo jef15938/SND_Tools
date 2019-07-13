@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerDetail, TelList } from './model/customerDetail';
+import { AppStore } from 'src/app/appSore/appStore';
 
 @Component({
   selector: 'app-prototype-pattern',
@@ -8,7 +9,11 @@ import { CustomerDetail, TelList } from './model/customerDetail';
 })
 export class PrototypePatternComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private store: AppStore
+  ) {
+    this.store.setCurrentMenuItem('prototypePattern');
+  }
 
   public title: string = 'Prototype Pattern';
   public customerDetail: CustomerDetail;
@@ -17,7 +22,7 @@ export class PrototypePatternComponent implements OnInit {
 
 
   ngOnInit() {
-    
+
   }
 
   addEmptyCustomerDetail() {
@@ -74,7 +79,7 @@ export class PrototypePatternComponent implements OnInit {
 
   public deepCloneWithoutClass(obj) {
 
-    
+
     return JSON.parse(JSON.stringify(obj));
 
   }

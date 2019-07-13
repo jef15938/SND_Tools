@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { element } from '@angular/core/src/render3/instructions';
 import { TypeScriptEmitter } from '@angular/compiler';
+import { AppStore } from 'src/app/appSore/appStore';
 
 @Component({
   selector: 'app-paint-board',
@@ -20,7 +21,11 @@ export class PaintBoardComponent implements OnInit {
   public imgSrc: string;
   public isShowImg: boolean = false;
   public isDisabledSave: boolean = true;
-  constructor() { }
+  constructor(
+    private store: AppStore
+  ) {
+    this.store.setCurrentMenuItem('paintBoard');
+   }
 
   ngOnInit() {
 

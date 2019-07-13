@@ -1,5 +1,6 @@
 import { Component, OnInit, NgZone, ChangeDetectorRef } from '@angular/core';
 import { differenceInSeconds, differenceInMilliseconds } from 'date-fns'
+import { AppStore } from 'src/app/appSore/appStore';
 
 @Component({
   selector: 'app-ng-zone-test',
@@ -16,8 +17,13 @@ export class NgZoneTestComponent implements OnInit {
 
   constructor(
     private zone: NgZone,
-    private changeDetector: ChangeDetectorRef
-  ) { }
+    private changeDetector: ChangeDetectorRef,
+    private store: AppStore 
+  ) { 
+    this.store.setCurrentMenuItem('ngZoneTest');
+  }
+
+  
 
   ngOnInit() {
 

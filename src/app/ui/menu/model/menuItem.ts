@@ -1,6 +1,5 @@
-export class menuItem {
+export class MenuItem {
 
-    private _imgUrl: string;
     private _name: string;
     private _url: string;
 
@@ -9,9 +8,6 @@ export class menuItem {
         this._url = url;
     }
 
-    get imgUrl() {
-        return this._imgUrl;
-    }
 
     get name() {
         return this._name;
@@ -19,5 +15,9 @@ export class menuItem {
 
     get url() {
         return this._url;
+    }
+
+    clone() {
+        return new MenuItem(this._name, this._url);
     }
 }

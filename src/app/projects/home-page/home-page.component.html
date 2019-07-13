@@ -1,9 +1,13 @@
-<div class="body">
-  
-  <!-- <div class="box-shadow-3d"></div> -->
+
+<!-- <div class="body">
+  <a class="title" style="z-index: 99;" [routerLink]="['/webParameterTest']" [queryParams]="{id: 1}">股票详情</a>
 
   <h1 class="title">Jeffery HomePage</h1>
   <div class="img">
     <img src="../../../assets/tree.svg">
   </div>
-</div>
+  
+</div> -->
+
+<iframe class="frame" id="myiframe" src="http://localhost:4200/webParameterTest"></iframe>
+<p><button onclick="myiframe.contentWindow.postMessage('test', '*');">send hello to children(postmessage)</button></p>

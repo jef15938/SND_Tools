@@ -41,27 +41,19 @@
 }
 .menuItem {
     position: relative;
-    top:0;
-    border: 5px;
+    // top:0;
     // display: block;
-    height: 3rem;
+   // height: 3rem;
     font-size: 1.5rem;
     line-height: 3rem;
     // font-weight: 100;
     text-align: center;
     vertical-align: auto;
-    // display: inline-block;
-    list-style-type: none;
-    //text-align: center;
+    
+  
+    // list-style-type: none;
 
-//    // display: block;
-//     height: 6rem;
-//     width: 6rem;
-    // .menuImg {
-    //     display: block;
-    //     height: 5rem;
-    //     width: 5rem;
-    // }
+
 }
 
 .menuItem:hover {
@@ -70,8 +62,15 @@
 }
 
 .clickMenuItem {
+    position: relative;
+    height: 3rem;
+    // font-size: 1.5rem;
     box-sizing: border-box;
-    border:2px #000000 solid;
+    border: 2px solid #000000;
+    text-align: center;
+    vertical-align: auto;
+    border-style:outset;
+  
 }
 
 .disabled {
