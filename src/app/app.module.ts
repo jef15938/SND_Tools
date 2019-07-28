@@ -15,6 +15,10 @@ import { PrototypePatternComponent } from './projects/prototype-pattern/prototyp
 import { NgZoneTestComponent } from './projects/ng-zone-test/ng-zone-test.component';
 import { WebParameterTestComponent } from './projects/web-parameter-test/web-parameter-test.component';
 import { LocalStorageTestComponent } from './projects/local-storage-test/local-storage-test.component';
+import { ArraySortComponent } from './projects/array-sort/array-sort.component';
+import { TreeComponent } from './projects/tree/tree.component';
+import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
+import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { LocalStorageTestComponent } from './projects/local-storage-test/local-s
     PrototypePatternComponent,
     NgZoneTestComponent,
     WebParameterTestComponent,
-    LocalStorageTestComponent
+    LocalStorageTestComponent,
+    ArraySortComponent,
+    TreeComponent,
+    NodeTreeComponent,
+    ZombieGameComponent
   ],
   imports: [
     BrowserModule,

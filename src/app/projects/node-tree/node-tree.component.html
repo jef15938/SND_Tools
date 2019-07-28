@@ -1,0 +1,12 @@
+<input class="inputText" type="text" [(ngModel)]="inputNodeName" [ngStyle]="{'background-color':isRemoveNodeSuccess?'#c3faa2':'#f7c1c1'}">
+<input class="removeNodeButton" type="button" value="removeNode" (click)="removeNode()">
+<textarea class="textArea" [(ngModel)]="inputJSONTextArea" [ngStyle]="{'background-color':isAddNodeFromJSONSuccess?'#c3faa2':'#f7c1c1'}"></textarea>
+<input class="submitButton" type="button" value="submit" (click)="submit()">
+<input class="resetButton" type="button" value="reset" (click)="resetNodeTree()">
+
+<div class="tree">
+</div>
+
+<span class="span"> ---------- after remove ---------- </span>
+<div class="afterTree">
+</div>

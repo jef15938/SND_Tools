@@ -13,12 +13,12 @@ export class WebParameterTestComponent implements OnInit {
   constructor(
     private route: ActivatedRoute
   ) {
-    // window.onmessage = function (e) {
-    //   if (e.data == 'test') {
-    //     alert('come from parent postmessage');
+    window.onmessage = function (e) {
+      if (e.data == 'test') {
+        alert('come from parent postmessage');
        
-    //   }
-    // };
+      }
+    };
 
   }
 

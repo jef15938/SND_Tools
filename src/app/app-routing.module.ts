@@ -8,6 +8,10 @@ import { PrototypePatternComponent } from './projects/prototype-pattern/prototyp
 import { NgZoneTestComponent } from './projects/ng-zone-test/ng-zone-test.component';
 import { WebParameterTestComponent } from './projects/web-parameter-test/web-parameter-test.component';
 import { LocalStorageTestComponent } from './projects/local-storage-test/local-storage-test.component';
+import { ArraySortComponent } from './projects/array-sort/array-sort.component';
+import { TreeComponent } from './projects/tree/tree.component';
+import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
+import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
 
 const routes: Routes = [
   { path: 'koaep', component: KoaepComponent },
@@ -17,10 +21,13 @@ const routes: Routes = [
   { path: 'ngZoneTest', component : NgZoneTestComponent},
   { path: 'webParameterTest', component : WebParameterTestComponent},
   { path: 'localStorageTest', component : LocalStorageTestComponent},
+  { path: 'arraySort', component : ArraySortComponent},
+  { path: 'nodeTree', component: NodeTreeComponent},
+  { path: 'tree', component: TreeComponent},
+  { path: 'zombieGame', component: ZombieGameComponent},
   { path: '', component: HomePageComponent }
 
 ];
-
 
 
 @NgModule({

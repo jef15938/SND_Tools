@@ -1,6 +1,4 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { element } from '@angular/core/src/render3/instructions';
-import { TypeScriptEmitter } from '@angular/compiler';
 import { AppStore } from 'src/app/appSore/appStore';
 
 @Component({

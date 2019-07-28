@@ -25,8 +25,11 @@ export class AppStore {
         menuList.push(new MenuItem('ngZoneTest', '/ngZoneTest'));
         menuList.push(new MenuItem('webParameterTest', '/webParameterTest'));
         menuList.push(new MenuItem('localStorageTest', '/localStorageTest'));
+        menuList.push(new MenuItem('arraySort','/arraySort'));
+        menuList.push(new MenuItem('nodeTree','/nodeTree'));
+        menuList.push(new MenuItem('zombieGame','/zombieGame'));
 
-
+        
         return menuList.map(x => x.clone());
     }
 

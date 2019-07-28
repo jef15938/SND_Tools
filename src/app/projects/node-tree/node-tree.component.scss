@@ -1,0 +1,49 @@
+.inputText {
+    position: relative;
+    left: 30px;
+    top: 15px;
+}
+
+.removeNodeButton {
+    position: relative;
+    left: 50px;
+    top: 15px;
+}
+
+.submitButton {
+    position: relative;
+    left: 450px;
+    width: 80px;
+    top: 15px;
+    z-index: 99;
+}
+.resetButton {
+    position: relative;
+    left: 370px;
+    width: 80px;
+    top: 40px;
+    z-index: 99;
+}
+
+.textArea {
+    position: absolute;
+    left: 400px;
+    width: 250px;
+    height: 300px;
+    top: 15px;
+    z-index: 99;
+    font-size: 20px;
+}
+
+.span {
+    position: relative;
+    top: 5px;
+    height: 10px;
+}
+
+.tree , .afterTree{
+    position: relative;
+    top: 10px;
+    font-size: 10px;
+}
+
