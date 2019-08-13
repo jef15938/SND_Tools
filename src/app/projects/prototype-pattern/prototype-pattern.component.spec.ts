@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PrototypePatternComponent } from './prototype-pattern.component';
+import { FormsModule } from '@angular/forms';
 
 describe('PrototypePatternComponent', () => {
   let component: PrototypePatternComponent;
@@ -8,7 +9,8 @@ describe('PrototypePatternComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrototypePatternComponent ]
+      declarations: [ PrototypePatternComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NodeTreeComponent } from './node-tree.component';
+import { FormsModule } from '@angular/forms';
 
 describe('NodeTreeComponent', () => {
   let component: NodeTreeComponent;
@@ -8,7 +9,8 @@ describe('NodeTreeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NodeTreeComponent ]
+      declarations: [ NodeTreeComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WebParameterTestComponent } from './web-parameter-test.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('WebParameterTestComponent', () => {
   let component: WebParameterTestComponent;
@@ -8,7 +9,8 @@ describe('WebParameterTestComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WebParameterTestComponent ]
+      declarations: [ WebParameterTestComponent ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));

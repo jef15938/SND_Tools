@@ -12,8 +12,8 @@ export class StrategyPatternComponent implements OnInit {
   public answer: number = 0;
   public targetID: string;
   public IStrategy: IStrategy;
-  public firstNumber: number;
-  public lastNumber: number;
+  public firstNumber: number = 10;
+  public lastNumber: number = 100;
 
 
   constructor(
@@ -23,6 +23,7 @@ export class StrategyPatternComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.IStrategy = new Plus();
   }
 
   onMouseOver(event) {

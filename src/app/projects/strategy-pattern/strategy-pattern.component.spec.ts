@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { StrategyPatternComponent } from './strategy-pattern.component';
+import { FormsModule } from '@angular/forms';
 
 describe('StrategyPatternComponent', () => {
   let component: StrategyPatternComponent;
@@ -8,7 +9,8 @@ describe('StrategyPatternComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StrategyPatternComponent ]
+      declarations: [ StrategyPatternComponent ],
+      imports: [ FormsModule ]
     })
     .compileComponents();
   }));
@@ -19,7 +21,11 @@ describe('StrategyPatternComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('calculate', () => {
+    let firstNumber = component.firstNumber;
+    let lastNumber = component.lastNumber;
+    let assertAnswer = firstNumber * lastNumber;
+    expect(component.IStrategy.calculate(firstNumber, lastNumber)).toEqual(assertAnswer);
+
   });
 });

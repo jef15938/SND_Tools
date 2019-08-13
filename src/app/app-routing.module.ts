@@ -13,7 +13,7 @@ import { TreeComponent } from './projects/tree/tree.component';
 import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
 import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'koaep', component: KoaepComponent },
   { path: 'paintBoard', component: PaintBoardComponent},
   { path: 'strategyPattern', component: StrategyPatternComponent},
