@@ -28,6 +28,8 @@ export class AppStore {
         menuList.push(new MenuItem('arraySort','/arraySort'));
         menuList.push(new MenuItem('nodeTree','/nodeTree'));
         menuList.push(new MenuItem('zombieGame','/zombieGame'));
+        menuList.push(new MenuItem('nestedLoopRefactor','/nestedLoopRefactor'));
+        menuList.push(new MenuItem('getSetGenerator','/getSetGenerator'));
 
         
         return menuList.map(x => x.clone());

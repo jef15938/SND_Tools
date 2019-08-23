@@ -1,0 +1,21 @@
+<div class="body" >
+  <h1 class="title">{{title}}</h1>
+
+  <table class="custmerDetailList">
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>birthdayMonth</th>
+      <th>Date</th>
+    </tr>
+
+    <tr *ngFor="let customerBirthDay of sortCustomerBirthDayList">
+      <th>{{customerBirthDay.firstName}}</th>
+      <th>{{customerBirthDay.lastName}}</th>
+      <th>{{customerBirthDay.birthdayMonth}}</th>
+      <th>{{customerBirthDay.birthdayDate}}</th>
+    </tr>
+
+
+  </table>
+</div>

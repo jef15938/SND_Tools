@@ -12,6 +12,8 @@ import { ArraySortComponent } from './projects/array-sort/array-sort.component';
 import { TreeComponent } from './projects/tree/tree.component';
 import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
 import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
+import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nested-loop-refactor.component';
+import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
 
 export const routes: Routes = [
   { path: 'koaep', component: KoaepComponent },
@@ -25,6 +27,8 @@ export const routes: Routes = [
   { path: 'nodeTree', component: NodeTreeComponent},
   { path: 'tree', component: TreeComponent},
   { path: 'zombieGame', component: ZombieGameComponent},
+  { path: 'nestedLoopRefactor', component: NestedLoopRefactorComponent},
+  { path: 'getSetGenerator', component: GetSetGeneratorComponent},
   { path: '', component: HomePageComponent }
 
 ];

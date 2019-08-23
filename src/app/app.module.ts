@@ -19,6 +19,8 @@ import { ArraySortComponent } from './projects/array-sort/array-sort.component';
 import { TreeComponent } from './projects/tree/tree.component';
 import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
 import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
+import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nested-loop-refactor.component';
+import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ZombieGameComponent } from './projects/zombie-game/zombie-game.componen
     ArraySortComponent,
     TreeComponent,
     NodeTreeComponent,
-    ZombieGameComponent
+    ZombieGameComponent,
+    NestedLoopRefactorComponent,
+    GetSetGeneratorComponent
   ],
   imports: [
     BrowserModule,
