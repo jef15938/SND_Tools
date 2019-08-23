@@ -29,7 +29,7 @@ export class GetSetGeneratorComponent implements OnInit {
 
   ngOnInit() {
     this.textArea = "private _text: string;\nprivate _hello: boolean";
-    this.onClickSubmit();
+    this.doConvert();
   }
 
   public onChangeSelect(selectType:string, selectOptionCode: string) {
@@ -40,10 +40,10 @@ export class GetSetGeneratorComponent implements OnInit {
       this.sortSelect = <sortSelect>selectOptionCode;
     }
 
-    this.onClickSubmit();
+    this.doConvert();
   }
 
-  public onClickSubmit() {
+  public doConvert() {
     this.result = '';
     this.textArea.split('\n');
     let splitEnterList = this.textArea.split('\n');
@@ -51,8 +51,6 @@ export class GetSetGeneratorComponent implements OnInit {
 
       let name = this._findPropertyName(item);
       let type = this._findTypeName(item);
-      console.log(name, type);
-
 
       if(this.typeSelect === typeSelect.ALL) {
         if(this.sortSelect === sortSelect.GETFIRT) {
@@ -77,6 +75,10 @@ export class GetSetGeneratorComponent implements OnInit {
 
   private genGetSet(name: string, type: string, genType: typeSelect) {
     // alert("name:"+name+ ' tpye:'+type);
+    if(StringUtil.isEmpty(name)||StringUtil.isEmpty(type)) {
+      console.log(name,type);
+      return;
+    }
     if (genType === typeSelect.SET) {
       this.result += "public " + genType + " " + name + "(" + name + ": " + type + ") {\n\tthis._" + name + " = " + name + ";\n}\n";
     }

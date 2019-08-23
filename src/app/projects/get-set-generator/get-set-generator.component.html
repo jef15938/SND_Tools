@@ -1,13 +1,13 @@
 
 <div class="body">
   <h1 class="title">Get Set Generator</h1>
-  <textarea [(ngModel)]="textArea" class="leftTextArea"></textarea>
+  <textarea [(ngModel)]="textArea" (ngModelChange)="doConvert()" class="leftTextArea"></textarea>
   <select class="selectType" [ngModel]="typeSelect" (ngModelChange)="onChangeSelect('type', $event)">
     <option *ngFor="let selectOption of typeSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}</option>
   </select>
   <select class="selectSort" [hidden]="typeSelect!==typeSelectEnum.ALL" [ngModel]="sortSelect" (ngModelChange)="onChangeSelect('sort', $event)">
     <option *ngFor="let selectOption of sortSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}</option>
   </select>
-  <!-- <button class="submitBtn" type="submit" (click)="onClickSubmit()">確認</button> -->
+  <!-- <button class="submitBtn" type="submit" (click)="doConvert()">確認</button> -->
   <textarea [(ngModel)]="result" class="rightTextArea"></textarea>
 </div>
