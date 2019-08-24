@@ -1,13 +1,38 @@
-
 <div class="body">
-  <h1 class="title">Get Set Generator</h1>
-  <textarea [(ngModel)]="textArea" (ngModelChange)="doConvert()" class="leftTextArea"></textarea>
-  <select class="selectType" [ngModel]="typeSelect" (ngModelChange)="onChangeSelect('type', $event)">
-    <option *ngFor="let selectOption of typeSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}</option>
-  </select>
-  <select class="selectSort" [hidden]="typeSelect!==typeSelectEnum.ALL" [ngModel]="sortSelect" (ngModelChange)="onChangeSelect('sort', $event)">
-    <option *ngFor="let selectOption of sortSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}</option>
-  </select>
-  <!-- <button class="submitBtn" type="submit" (click)="doConvert()">確認</button> -->
-  <textarea [(ngModel)]="result" class="rightTextArea"></textarea>
+  
+  <div class="upper">
+    <div class="title">
+      <h1>Get Set Generator</h1>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <!-- 左側輸入欄  開始-->
+    <div class="left-division">
+      <textarea [(ngModel)]="textArea" (ngModelChange)="doConvert()" class="text-input left-input"></textarea>
+    </div>
+    <!-- 左側輸入欄  結束-->
+
+    <!-- 中間選擇區  開始-->
+    <div class="middle-division">
+      <select class="selectType" [ngModel]="typeSelect" (ngModelChange)="onChangeSelect('type', $event)">
+        <option *ngFor="let selectOption of typeSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}
+        </option>
+      </select>
+      <select class="selectSort" [hidden]="typeSelect!==typeSelectEnum.ALL" [ngModel]="sortSelect"
+        (ngModelChange)="onChangeSelect('sort', $event)">
+        <option *ngFor="let selectOption of sortSelectOptionList" value="{{selectOption.code}}">{{selectOption.name}}
+        </option>
+      </select>
+    </div>
+    <!-- 中間選擇區  結束-->
+    
+    <!-- 右側輸入欄  開始-->
+    <div class="right-division">
+      <!-- <button class="submitBtn" type="submit" (click)="doConvert()">確認</button> -->
+      <textarea [(ngModel)]="result" class="text-input right-input"></textarea>
+    </div>
+    <!-- 右側輸入欄  結束-->
+
+  </div>
 </div>
