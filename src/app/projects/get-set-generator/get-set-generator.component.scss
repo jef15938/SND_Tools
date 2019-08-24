@@ -55,14 +55,14 @@
 .selectType,.selectSort {
     position: relative;
     width: 200%;
-    height: 40px;
+    height: 10%;
     text-align: left;
     text-align-last: center;
     font-size: 15px;
     border: black 2px solid;
     background-color: rgb(233, 255, 233);
     &+&{
-        margin-top: 20px;
+        margin-top: 100px;
     }
 }
 
