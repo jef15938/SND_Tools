@@ -9,15 +9,15 @@ import { AppStore } from 'src/app/appSore/appStore';
 export class LocalStorageTestComponent implements OnInit {
 
   public buttonClickCount: number = 0;
-  private buttonClickCountStorageKey: string;
-  private visitorCountKey: string;
+  private buttonClickCountStorageKey: LOCALSTORAGEKEY;
+  private visitorCountKey: LOCALSTORAGEKEY;
   public visitorMessage: string = 'Hello! You are the ${visitorCount} visitor.';
   constructor(
     private store: AppStore
   ) {
     this.store.setCurrentMenuItem('localStorageTest');
-    this.buttonClickCountStorageKey = LOCALSTORAGE.CLICKCOUNT;
-    this.visitorCountKey = LOCALSTORAGE.VISITORCOUNT;
+    this.buttonClickCountStorageKey = LOCALSTORAGEKEY.CLICKCOUNT;
+    this.visitorCountKey = LOCALSTORAGEKEY.VISITORCOUNT;
   }
 
   ngOnInit() {
@@ -52,11 +52,11 @@ export class LocalStorageTestComponent implements OnInit {
   }
 
 
-  private _getLocalStorageContentByKey(key: string): string {
+  private _getLocalStorageContentByKey(key: LOCALSTORAGEKEY): string {
     return localStorage.getItem(key);
   }
 
-  private _setLocalStorage(key: string, value: string) {
+  private _setLocalStorage(key: LOCALSTORAGEKEY, value: string) {
     localStorage.setItem(key, value);
   }
 
@@ -65,7 +65,7 @@ export class LocalStorageTestComponent implements OnInit {
 }
 
 
-export enum LOCALSTORAGE {
+export enum LOCALSTORAGEKEY {
   CLICKCOUNT = 'buttonClickCount',
   VISITORCOUNT = 'visitorCount'
 }

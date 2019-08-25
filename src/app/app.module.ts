@@ -21,6 +21,7 @@ import { NodeTreeComponent } from './projects/node-tree/node-tree.component';
 import { ZombieGameComponent } from './projects/zombie-game/zombie-game.component';
 import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nested-loop-refactor.component';
 import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
+import { LayoutPracticeComponent } from './projects/layout-practice/layout-practice.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-g
     NodeTreeComponent,
     ZombieGameComponent,
     NestedLoopRefactorComponent,
-    GetSetGeneratorComponent
+    GetSetGeneratorComponent,
+    LayoutPracticeComponent
   ],
   imports: [
     BrowserModule,

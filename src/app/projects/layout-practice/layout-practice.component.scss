@@ -1,0 +1,66 @@
+@import '../style/project-common.scss';
+
+.practice-area {
+    margin: 80px 10% 10% 10%;
+}
+.iconImg {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.practice-title {
+    font-size: 30px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.practice-content {
+    font-size: 20px;
+}
+
+
+
+.sample1 {
+    width: 100%;
+    
+    // padding: 10px 10px 10px 10px;
+    table {
+        box-sizing: border-box;
+        border: 1px solid;
+        padding: 10px 10px 10px 10px;
+        width: 100%;
+        top: 30%;
+    }
+
+    td {
+        vertical-align: top;
+    }  
+}
+
+.sample2 {
+    box-sizing: border-box;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid;
+    width: 100%;
+    top: 30%;
+    margin-top: 30px;
+
+    .img-and-title {
+        display: flex;
+    }
+
+    .practice-title {
+        margin-left: 5px;
+        margin-right: 2px;
+    }
+
+    .practice-content {
+        margin-left: 36px;
+        margin-right: 3px;
+    } 
+
+    .iconImg {
+        margin: 1px 0px 0px 1px;
+    }
+}
