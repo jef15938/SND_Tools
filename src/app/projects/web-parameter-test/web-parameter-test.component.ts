@@ -13,17 +13,24 @@ export class WebParameterTestComponent implements OnInit {
   constructor(
     private route: ActivatedRoute
   ) {
-    window.onmessage = function (e) {
-      if (e.data == 'test') {
-        alert('come from parent postmessage');
+    // window.onmessage = function (e) {
+    //   if (e.data == 'test') {
+    //     alert('come from parent postmessage');
        
-      }
-    };
+       
+    //   }
+    // };
 
   }
 
   ngOnInit() {
-    
+    let canvas = document.createElement('canvas');
+    let ctx = canvas.getContext('2d');
+    let imgSource = document.getElementById('pencilImg');
+    console.warn(imgSource.offsetWidth, imgSource.clientHeight);
+   
+    // ctx.drawImage(imgSource, imgSource.width, imgSource.height);
+    console.warn(canvas.toDataURL('png'));
   }
 
 }

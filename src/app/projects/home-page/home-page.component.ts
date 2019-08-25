@@ -16,6 +16,16 @@ export class HomePageComponent implements OnInit{
     private store: AppStore
   ) { 
     this.store.setCurrentMenuItem('');
+    
+    window.onmessage = function (e) {
+      if (e.data.type!=='webpackOk') {
+         console.warn(e);
+       
+       
+      }
+      // console.warn(e);
+    };
+
   }
 
   ngOnInit() {
