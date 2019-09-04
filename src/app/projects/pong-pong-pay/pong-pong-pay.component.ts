@@ -83,7 +83,7 @@ export class PongPongPayComponent implements OnInit {
   }
 
   public getDate(date: string | number | Date) {
-    return _.getDate(date);
+    return _.format(date,'DD');
   }
 
 

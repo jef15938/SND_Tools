@@ -102,6 +102,16 @@
             height: calc(75% - 20px);
             overflow: scroll;
             position: relative;
+
+            .c1 {
+                width: 20%
+            }
+            .c2 {
+                width: 60%
+            }
+            .c3 {
+                width: 20%
+            }                    
         }
     }
 }

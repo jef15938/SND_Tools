@@ -56,9 +56,9 @@
               <table>
                 <ng-container *ngFor="let payRecord of payRecordMonth.payRecordList">
                   <tr>
-                    <th>{{getDate(payRecord.date)}} 號</th>
-                    <th>{{payRecord.item}}</th>
-                    <th>$ {{payRecord.cost}}</th>
+                    <th class="cl">{{getDate(payRecord.date)}} 號</th>
+                    <th class="c2">{{payRecord.item}}</th>
+                    <th class="c3">$ {{payRecord.cost}}</th>
                   </tr>
                 </ng-container>
               </table>
