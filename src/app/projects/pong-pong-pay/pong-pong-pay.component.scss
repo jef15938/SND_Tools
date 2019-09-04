@@ -1,0 +1,107 @@
+@import '../style/project-common.scss';
+
+.input-file-area {
+    display: flex;
+    position: absolute;
+    height: 10%;
+    width: 50%;
+    top: 20%;
+    left: 25%;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+    }
+
+}
+.content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+.MainTable {
+
+    height: 30%;
+    width: 50%;
+    border-collapse:collapse;
+    td, th {
+        border:1px solid black;
+        font-size: 23px;
+    }
+
+    .thead {
+        font-size: 20px;
+        background-color: rgb(200, 200, 200);
+    }
+}
+
+
+
+
+.popup-area {
+    position: fixed;
+    display: flex;
+    background-color: rgba(65, 65, 65, 0.5);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .popup-content {
+        // overflow: scroll;
+        position: relative;
+        background-color: bisque;
+        opacity: 1;
+        z-index: 99;
+        width: 50%;
+        height: 60%;
+        text-align: center;
+        border-radius: 5px;
+
+        table {
+            margin: 3% 5% 3% 5%;
+            position: relative;
+            width: 90%;
+            border-collapse:collapse;
+            td, th {
+                // margin: 3px 3px 3px 3px;
+                height: 30px;
+                position: relative;
+                border:1px solid black;
+            }
+        }
+
+
+        .person-detail {
+
+            display: flex;
+            height: 25%;
+            width: 100%;
+            background-color: rgb(220, 241, 211);
+            position: relative;
+            // font-size: 20px;
+            // line-height: 40px;
+            // padding: 0 5% 0 5%;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .scroll-area {
+            margin: 10px;
+            width: auto;
+            height: calc(75% - 20px);
+            overflow: scroll;
+            position: relative;
+        }
+    }
+}

@@ -22,6 +22,8 @@ import { ZombieGameComponent } from './projects/zombie-game/zombie-game.componen
 import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nested-loop-refactor.component';
 import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
 import { LayoutPracticeComponent } from './projects/layout-practice/layout-practice.component';
+import { PongPongPayComponent } from './projects/pong-pong-pay/pong-pong-pay.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,11 @@ import { LayoutPracticeComponent } from './projects/layout-practice/layout-pract
     ZombieGameComponent,
     NestedLoopRefactorComponent,
     GetSetGeneratorComponent,
-    LayoutPracticeComponent
+    LayoutPracticeComponent,
+    PongPongPayComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     StoreModule.forRoot(fromStore.reducers),
     AppRoutingModule,

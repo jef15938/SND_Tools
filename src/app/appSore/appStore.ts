@@ -32,7 +32,8 @@ export class AppStore {
             ['zombieGame','/zombieGame'],
             ['nestedLoopRefactor','/nestedLoopRefactor'],
             ['getSetGenerator','/getSetGenerator'],
-            ['layoutPractice','/layoutPractice']
+            ['layoutPractice','/layoutPractice'],
+            ['pongpongPay','/pongpongPay']
 
         ]
 

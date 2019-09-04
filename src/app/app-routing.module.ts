@@ -15,6 +15,7 @@ import { ZombieGameComponent } from './projects/zombie-game/zombie-game.componen
 import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nested-loop-refactor.component';
 import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
 import { LayoutPracticeComponent } from './projects/layout-practice/layout-practice.component';
+import { PongPongPayComponent } from './projects/pong-pong-pay/pong-pong-pay.component';
 
 export const routes: Routes = [
   { path: 'koaep', component: KoaepComponent },
@@ -31,6 +32,7 @@ export const routes: Routes = [
   { path: 'nestedLoopRefactor', component: NestedLoopRefactorComponent},
   { path: 'getSetGenerator', component: GetSetGeneratorComponent},
   { path: 'layoutPractice', component: LayoutPracticeComponent},
+  { path: 'pongpongPay', component: PongPongPayComponent},
   { path: '', component: HomePageComponent }
 
 ];

@@ -1,0 +1,73 @@
+<div class="body">
+  <h1 class="title" (click)="onClickTitle()">PongPongPay</h1>
+  <div class="input-file-area" *ngIf="isShowInputFile">
+    <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file"
+      accept=".xlsx">
+    <button type="button" class="btn btn-info" (click)="onFileChange()">上傳</button>
+    <img class="close-icon" src="./assets/icon-close.svg" (click)="onClickCloseInputFile()">
+  </div>
+  <div class="content">
+    <table class="MainTable">
+      <tr>
+        <th class="thead">姓名</th>
+        <th class="thead">剩餘金額</th>
+        <th class="thead">交易明細</th>
+      </tr>
+
+      <tr *ngFor="let personItem of payPersonItemList">
+        <th><span>{{personItem.name}}</span></th>
+        <th><span [ngStyle]="{'color':personItem.restMoney<0?'red':''}">{{personItem.restMoney}}</span></th>
+        <th><a [routerLink]="[]" (click)="onClickItem(personItem)">detail</a></th>
+      </tr>
+    </table>
+
+    <div class="popup-area" *ngIf="isdetailPopupOpen" (click)="onClosePopup()">
+
+      <div class="popup-content" (mouseover)="onMouseover()" (mouseout)="onMouseout()"
+        (click)="$event.stopPropagation()">
+        <div class="person-detail">
+          <!-- <span>姓名: {{currentpayPersonItem.name }}</span>
+          <span>剩餘金額: <span [ngStyle]="{'color':currentpayPersonItem.restMoney<0?'red':''}">{{currentpayPersonItem.restMoney}}</span></span>
+          <span>儲值總金額: {{currentpayPersonItem.money}}</span>
+          <span>消費總金額: {{currentpayPersonItem.costSum}}</span> -->
+          <table>
+            <tr>
+              <th class="thead">姓名</th>
+              <th class="thead">儲值總金額</th>
+              <th class="thead">消費總金額</th>
+              <th class="thead">剩餘金額</th>
+            </tr>
+
+            <tr *ngFor="let personItem of payPersonItemList">
+              <th><span>{{currentpayPersonItem.name }}</span></th>
+              <th><span>{{currentpayPersonItem.money}}</span></th>
+              <th><span>{{currentpayPersonItem.costSum}}</span></th>
+              <th><span
+                  [ngStyle]="{'color':currentpayPersonItem.restMoney<0?'red':''}">{{currentpayPersonItem.restMoney}}</span>
+              </th>
+            </tr>
+          </table>
+        </div>
+        <div class="scroll-area">
+          <ng-container *ngFor="let payRecordYear of payRecordYearList">
+            <h2>{{payRecordYear.year}} 年</h2>
+            <ng-container *ngFor="let payRecordMonth of payRecordYear.payRecordMonthList">
+              <h3>{{getShowMonthText(payRecordMonth.month)}}</h3>
+              <table>
+                <ng-container *ngFor="let payRecord of payRecordMonth.payRecordList">
+                  <tr>
+                    <th>{{getDate(payRecord.date)}} 號</th>
+                    <th>{{payRecord.item}}</th>
+                    <th>$ {{payRecord.cost}}</th>
+                  </tr>
+                </ng-container>
+              </table>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

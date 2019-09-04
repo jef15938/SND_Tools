@@ -97,7 +97,7 @@ export class GetSetGeneratorComponent implements OnInit {
   private _findTypeName(str: string): string {
     let colonIndex = str.indexOf(':');
     let typeStartIndex = colonIndex + 1 + this._findSpaceEndIndex(str.slice(colonIndex + 1));
-    let typeEndIndex = typeStartIndex + 1 + this._findNotEnglishOrNumberEndIndex(str.slice(typeStartIndex)) - 1;
+    let typeEndIndex = typeStartIndex + 1 + this._findNotTypeNameEndIndex(str.slice(typeStartIndex)) - 1;
     typeEndIndex = typeEndIndex <= typeStartIndex ? str.length : typeEndIndex;
     return str.slice(typeStartIndex, typeEndIndex);
   }
@@ -119,6 +119,18 @@ export class GetSetGeneratorComponent implements OnInit {
     let result = -1;
     for (var i = 0; i < charArr.length && result === -1; i++) {
       if (!StringUtil.isAllEnglishChar(charArr[i]) && !StringUtil.isAllNumberChar(charArr[i])) {
+        result = i;
+      }
+    }
+
+    return result;
+  }
+
+  private _findNotTypeNameEndIndex(str: string): number {
+    let charArr = str.split('');
+    let result = -1;
+    for (var i = 0; i < charArr.length && result === -1; i++) {
+      if (!StringUtil.isAllEnglishChar(charArr[i]) && !StringUtil.isAllNumberChar(charArr[i])&&charArr[i]!=='>'&&charArr[i]!=='<') {
         result = i;
       }
     }
