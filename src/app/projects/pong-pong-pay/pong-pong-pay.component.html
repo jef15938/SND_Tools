@@ -16,8 +16,8 @@
 
       <tr *ngFor="let personItem of payPersonItemList">
         <th><span>{{personItem.name}}</span></th>
-        <th><span [ngStyle]="{'color':personItem.restMoney<0?'red':''}">{{personItem.restMoney}}</span></th>
-        <th><a [routerLink]="[]" (click)="onClickItem(personItem)">detail</a></th>
+        <th><span [ngStyle]="{'color':personItem.restMoney<0?'red':''}">$ {{personItem.restMoney}}</span></th>
+        <th><a [routerLink]="[]" (click)="onClickItem(personItem)">Detail</a></th>
       </tr>
     </table>
 
@@ -40,10 +40,10 @@
 
             <tr *ngFor="let personItem of payPersonItemList">
               <th><span>{{currentpayPersonItem.name }}</span></th>
-              <th><span>{{currentpayPersonItem.money}}</span></th>
-              <th><span>{{currentpayPersonItem.costSum}}</span></th>
+              <th><span>$ {{currentpayPersonItem.money}}</span></th>
+              <th><span>$ {{currentpayPersonItem.costSum}}</span></th>
               <th><span
-                  [ngStyle]="{'color':currentpayPersonItem.restMoney<0?'red':''}">{{currentpayPersonItem.restMoney}}</span>
+                  [ngStyle]="{'color':currentpayPersonItem.restMoney<0?'red':''}">$ {{currentpayPersonItem.restMoney}}</span>
               </th>
             </tr>
           </table>
