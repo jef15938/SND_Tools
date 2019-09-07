@@ -1,0 +1,41 @@
+.main-area {
+    z-index: 999;
+    // position: fixed;
+    width: 100%;
+    height: 100%;
+    // background-color: rgb(187, 255, 204);
+
+    animation: feedBack 2s 1;
+    animation-fill-mode: forwards;
+
+
+    .feed-back-area {
+        // background-color: aquamarine;
+        display: flex;
+        position: absolute;
+        // top: calc(10% - 25px);
+        // right: 10%;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        // background-color: rgb(102, 255, 140);
+    }
+
+}
+
+
+
+
+@keyframes feedBack {
+    0%   {opacity: 0 }
+    50%   {opacity: 1 }
+    100% {opacity: 0}
+}

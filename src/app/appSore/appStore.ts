@@ -27,13 +27,16 @@ export class AppStore {
             ['ngZoneTest', '/ngZoneTest'],
             ['webParameterTest', '/webParameterTest'],
             ['localStorageTest', '/localStorageTest'],
-            ['arraySort','/arraySort'],
-            ['nodeTree','/nodeTree'],
-            ['zombieGame','/zombieGame'],
-            ['nestedLoopRefactor','/nestedLoopRefactor'],
-            ['getSetGenerator','/getSetGenerator'],
-            ['layoutPractice','/layoutPractice'],
-            ['pongpongPay','/pongpongPay']
+            ['arraySort', '/arraySort'],
+            ['nodeTree', '/nodeTree'],
+            ['zombieGame', '/zombieGame'],
+            ['nestedLoopRefactor', '/nestedLoopRefactor'],
+            ['getSetGenerator', '/getSetGenerator'],
+            ['layoutPractice', '/layoutPractice'],
+            ['pongpongPay', '/pongpongPay'],
+            ['xlxsToXls', '/xlxsToXls'],
+            ['updateLanguageByXls', '/updateLanguage'],
+            ['updateLanguageByXlsx', '/updateLanguageByXlsx']
 
         ]
 

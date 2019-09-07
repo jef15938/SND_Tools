@@ -1,0 +1,7 @@
+
+<div class="main-area" *ngIf="isShowFeedBack && feedBackInfo">
+  <div class="feed-back-area">
+    <img [src]="successImgSrc" *ngIf="feedBackInfo.feedBackType===feedBackTypeEnum.SUCCESS">
+    <img [src]="failImgSrc" *ngIf="feedBackInfo.feedBackType===feedBackTypeEnum.FAIL">
+  </div>
+</div>

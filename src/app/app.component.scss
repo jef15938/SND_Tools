@@ -8,11 +8,13 @@ $menu-body-color:#fff;
 
 .menuOpen {
     position: absolute;
-
+    border:2px #000000 solid;
     display:block;
     height: 100%;
+    overflow: hidden;
     top: 0;
     left: 0;
+    bottom: 0;
     width: $menu-whole-size;
     animation: menuMoveRight 1.5s 1;
     z-index: 999;
@@ -20,9 +22,11 @@ $menu-body-color:#fff;
 
 .menuClose {
 
+    border:2px #000000 solid;
     position: absolute;
     display:block;
     height: 100%;
+    overflow: hidden;
     top: 0;
     left: $menu-close-size - $menu-whole-size;
     width: $menu-whole-size;
@@ -35,7 +39,7 @@ $menu-body-color:#fff;
     position: absolute;
     display:block;
     //width: calc(100% - #{$menu-whole-size})-300px;
-    height: 100%;
+    height: 100vh;
     bottom: 0;
     top: 0;
     left: 20rem;

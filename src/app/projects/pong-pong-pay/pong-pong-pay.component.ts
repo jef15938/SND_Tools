@@ -16,7 +16,8 @@ export class PongPongPayComponent implements OnInit {
 
   constructor(
     private httpService: HttpClient,
-  ) { }
+  ) { 
+  }
 
   public payPersonItemList: Array<PayPersonItem> = [];
   public isdetailPopupOpen: boolean = false;
@@ -26,6 +27,7 @@ export class PongPongPayComponent implements OnInit {
   public currentpayPersonItem: PayPersonItem;
   private clickTitleCount: number = 0;
   public isShowInputFile: boolean = false;
+  private file: File;
 
 
 
@@ -41,6 +43,7 @@ export class PongPongPayComponent implements OnInit {
     if (this.clickTitleCount === 3) {
       // let pwd = prompt('password: ','123');
       let isClickCancel: boolean = false;
+      
       while (this.isShowInputFile === false && !isClickCancel) {
         let pwd = prompt('password: ', '');
         if (pwd === '5t$R3e@W1q') {
@@ -63,7 +66,6 @@ export class PongPongPayComponent implements OnInit {
   onClickItem(personItem: PayPersonItem) {
     console.warn('id: ', personItem.id);
     this.currentpayPersonItem = personItem;
-    // this.currentpayPersonItem.restMoney
     this.payRecordYearList = this._getPayRecordYearList(personItem.id);
     this.isdetailPopupOpen = true;
   }
@@ -132,8 +134,7 @@ export class PongPongPayComponent implements OnInit {
 
   //inside export class
 
-  arrayBuffer: any;
-  file: File;
+
   incomingfile(event) {
     this.file = event.target.files[0];
   }
@@ -154,18 +155,13 @@ export class PongPongPayComponent implements OnInit {
       let dataString = JSON.stringify(jsonData);
       let jsonFormat = this._xlsxJSONformat(dataString);
 
-      this._updatePayPersonItemListByJson(jsonFormat);
-      // this.payPersonItemList = (<Array<any>>jsonFormat).map(x => {
-      //   let payRecordList: Array<PayRecord> = (<Array<any>>x.PayRecordList).map(x => new PayRecord(x.Date, x.Item, x.Cost));
-      //   let costSum = payRecordList.map(payRecord => payRecord.cost).reduce((total, each) => total + each, 0);
-      //   return new PayPersonItem(x.ID, x.Name, x.Money, costSum, payRecordList);
-      // });
+     
 
+      this._updatePayPersonItemListByJson(jsonFormat);
+      
       window.localStorage.setItem('Data', JSON.stringify(jsonFormat));
       this._getLoclStorageDataAndSetList();
-      // console.log("dataString: ", dataString);
-      // document.getElementById('output').innerHTML = dataString.slice(0, 300).concat("...");
-      // this.setDownload(dataString);
+
     }
     reader.readAsBinaryString(this.file);
   }
@@ -199,11 +195,6 @@ export class PongPongPayComponent implements OnInit {
     if (getDataFromLocalStorage) {
       let dataParseJson = JSON.parse(getDataFromLocalStorage);
       this._updatePayPersonItemListByJson(dataParseJson);
-      // this.payPersonItemList = (<Array<any>>dataParseJson).map(x => {
-      //   let payRecordList: Array<PayRecord> = (<Array<any>>x.PayRecordList).map(x => new PayRecord(x.Date, x.Item, x.Cost));
-      //   let costSum = payRecordList.map(payRecord => payRecord.cost).reduce((total, each) => total + each, 0);
-      //   return new PayPersonItem(x.ID, x.Name, x.Money, costSum, payRecordList);
-      // });
     }
   }
 

@@ -1,0 +1,45 @@
+@import '../style/project-common.scss';
+
+.content {
+    background-color: #faebd7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    button {
+        border-radius: 10px;
+    }
+
+    .download-sheet {
+        background-color: rgb(172, 177, 246);
+        width: 20%;
+        height: 25px;
+        position: relative;
+        top: 11%;
+    }
+
+    .input-file-area {
+       
+        width: auto;
+        position: relative;
+        top: 13%;
+        height: auto;
+    }
+    
+    .text-area {
+        position: relative;
+        top: 11%;
+        width: 80%;
+        height: 70%;
+    }
+
+    .tip-text {
+        position: relative;
+        top: 11%;
+        height: 20px;
+    }
+}

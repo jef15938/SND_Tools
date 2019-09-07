@@ -1,9 +1,9 @@
 @import '../../../app.component.scss';
 
 .menu {
+
     position: absolute;
     background-color: $menu-body-color;
-    border:2px #000000 solid;
 
     top: 0;
     left: 0;
@@ -34,10 +34,12 @@
     position: absolute;
     text-align: center;
     width: 100%;
+    height: calc(100% - #{$menu-header-height});
     padding: 0;
     top: #{$menu-header-height};
     margin-block-start: 0rem;
     left: 0;
+    overflow: scroll;
 }
 .menuItem {
     position: relative;

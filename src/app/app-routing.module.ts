@@ -16,6 +16,9 @@ import { NestedLoopRefactorComponent } from './projects/nested-loop-refactor/nes
 import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-generator.component';
 import { LayoutPracticeComponent } from './projects/layout-practice/layout-practice.component';
 import { PongPongPayComponent } from './projects/pong-pong-pay/pong-pong-pay.component';
+import { Xlsx2xlsComponent } from './projects/xlsx2xls/xlsx2xls.component';
+import { UpdateLanguageComponent } from './projects/update-language/update-language.component';
+import { UpdateLanguageByXlsxComponent } from './projects/update-language-by-xlsx/update-language-by-xlsx.component';
 
 export const routes: Routes = [
   { path: 'koaep', component: KoaepComponent },
@@ -33,6 +36,9 @@ export const routes: Routes = [
   { path: 'getSetGenerator', component: GetSetGeneratorComponent},
   { path: 'layoutPractice', component: LayoutPracticeComponent},
   { path: 'pongpongPay', component: PongPongPayComponent},
+  { path: 'xlxsToXls', component: Xlsx2xlsComponent},
+  { path: 'updateLanguage', component: UpdateLanguageComponent},
+  { path: 'updateLanguageByXlsx', component: UpdateLanguageByXlsxComponent},
   { path: '', component: HomePageComponent }
 
 ];

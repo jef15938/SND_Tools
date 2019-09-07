@@ -1,0 +1,13 @@
+<div class="body">
+
+  <h1 class="title">{{title}}</h1>
+  <div class="input-file-area">
+    <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file"
+      accept=".xlsx">
+    <button type="button" class="btn btn-info" (click)="onFileChange()">上傳</button>
+    <img class="close-icon" src="./assets/icon-close.svg" (click)="onClickCloseInputFile()">
+  </div>
+
+</div>
+
+

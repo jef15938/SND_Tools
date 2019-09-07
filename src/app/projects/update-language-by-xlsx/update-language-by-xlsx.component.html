@@ -1,0 +1,17 @@
+<div class="body">
+
+  <h1 class="title">{{title}}</h1>
+  <div class="content" id="dropbox">
+    <button class="download-sheet" (click)="downloadFileFromGoogleSheet()">下載線上語系檔 (.xlsx)</button>
+    <div class="input-file-area">
+      <input type="file" style="display: inline-block;" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx, .xls"
+       >
+      <button type="button" (click)="uploadFile()">上傳</button>
+    </div>
+    <h3 class="tip-text">⇊ Or drop file below ⇊</h3>
+    <textarea class="text-area" id="textArea" [(ngModel)]="jsonText"></textarea>
+  </div>
+
+</div>
+
+<app-feed-back [(isShowFeedBack)]="isShowFeedBack" [feedBackInfo]="feedBackInfo"></app-feed-back>

@@ -24,6 +24,10 @@ import { GetSetGeneratorComponent } from './projects/get-set-generator/get-set-g
 import { LayoutPracticeComponent } from './projects/layout-practice/layout-practice.component';
 import { PongPongPayComponent } from './projects/pong-pong-pay/pong-pong-pay.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Xlsx2xlsComponent } from './projects/xlsx2xls/xlsx2xls.component';
+import { UpdateLanguageComponent } from './projects/update-language/update-language.component';
+import { UpdateLanguageByXlsxComponent } from './projects/update-language-by-xlsx/update-language-by-xlsx.component';
+import { FeedBackComponent } from './ui/feed-back/feed-back.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { HttpClientModule } from '@angular/common/http';
     NestedLoopRefactorComponent,
     GetSetGeneratorComponent,
     LayoutPracticeComponent,
-    PongPongPayComponent
+    PongPongPayComponent,
+    Xlsx2xlsComponent,
+    UpdateLanguageComponent,
+    UpdateLanguageByXlsxComponent,
+    FeedBackComponent
   ],
   imports: [
     HttpClientModule,

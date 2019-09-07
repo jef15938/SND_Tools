@@ -1,0 +1,25 @@
+@import '../style/project-common.scss';
+
+.content {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .input-file-area {
+        position: relative;
+        top: 10%;
+        height: auto;
+    }
+    
+    .text-area {
+        position: relative;
+        top: 12%;
+        width: 80%;
+        height: 70%;
+    }
+}
